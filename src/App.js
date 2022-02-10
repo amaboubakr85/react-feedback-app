@@ -7,6 +7,7 @@ import FeedbackStats from './components/FeedbackStats'
 import Header from './components/Header'
 import FeedbackData from './data/FeedbackData'
 import AboutPage from './pages/AboutPage'
+import AboutIconLink from './components/AboutIconLink'
 
 const App = () => {
   // States for feedback
@@ -38,10 +39,12 @@ const App = () => {
                   <FeedbackStats feedback={feedback} />
                   <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
                 </>
-              }></Route>
+              }
+            />
             <Route path='/about' element={<AboutPage />} />
           </Routes>
         </div>
+        <AboutIconLink />
       </Router>
     </>
   )
